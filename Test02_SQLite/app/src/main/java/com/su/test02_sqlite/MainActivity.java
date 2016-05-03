@@ -33,21 +33,21 @@ public class MainActivity extends AppCompatActivity {
 
         switch (view.getId()){
             case R.id.button:
-                Toast.makeText(MainActivity.this, "this is insert", Toast.LENGTH_LONG).show();
+//                Toast.makeText(MainActivity.this, "this is insert", Toast.LENGTH_LONG).show();
                 dbHelper.checkout("insert");
                 break;
             case R.id.button2:
-                Toast.makeText(MainActivity.this,"this is search",Toast.LENGTH_LONG).show();
+//                Toast.makeText(MainActivity.this,"this is search",Toast.LENGTH_LONG).show();
                 dbHelper.checkout("search");
                 break;
-            case R.id.button3:
-                Toast.makeText(MainActivity.this,"this is update",Toast.LENGTH_LONG).show();
-                dbHelper.checkout("update");
-                break;
-            case R.id.button4:
-                Toast.makeText(MainActivity.this,"this is delete",Toast.LENGTH_LONG).show();
-                dbHelper.checkout("delete");
-                break;
+//            case R.id.button3:
+//                Toast.makeText(MainActivity.this,"this is update",Toast.LENGTH_LONG).show();
+//                dbHelper.checkout("update");
+//                break;
+//            case R.id.button4:
+//                Toast.makeText(MainActivity.this,"this is delete",Toast.LENGTH_LONG).show();
+//                dbHelper.checkout("delete");
+//                break;
         }
     }
 }

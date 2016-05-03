@@ -35,8 +35,8 @@ public class MyDBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String sql = "CREATE TABLE road (" +
                 " _id INTEGER PRIMARY KEY," +
-                " name TEXT," +
-                " score REAL)";
+                " lat DOUBLE," +
+                " lng DOUBLE)";
         db.execSQL(sql);
     }
 
@@ -66,19 +66,20 @@ public class MyDBHelper extends SQLiteOpenHelper {
                 case "search":
                     SqlQuery("SELECT * FROM " + "road");
                     break;
-                case "update":
-                    id = Integer.parseInt(tid.getText().toString());
-                    cv = new ContentValues();
-                    cv.put("score", Double.parseDouble(score.getText().toString()));
-                    count = db.update("road", cv, "_id=" + id, null);
-                    output.setText("更新記錄成功" + count);
-                    break;
-                case "delete":
-                    id = Integer.parseInt(tid.getText().toString());
-                    count = db.delete("road" +
-                            "", "_id=" + id, null);
-                    output.setText("刪除記錄成功" + count);
-                    break;
+//                case "update":
+//                    id = Integer.parseInt(tid.getText().toString());
+//                    cv = new ContentValues();
+//                    cv.put("score", Double.parseDouble(score.getText().toString()));
+//                    count = db.update("road", cv, "_id=" + id, null);
+//                    output.setText("更新記錄成功" + count);
+//                    break;
+
+//                case "delete":
+//                    id = Integer.parseInt(tid.getText().toString());
+//                    count = db.delete("road" +
+//                            "", "_id=" + id, null);
+//                    output.setText("刪除記錄成功" + count);
+//                    break;
             }
         }
 
